@@ -7,10 +7,6 @@ export default defineConfig({
   integrations: [tailwind()],
   site:'https://NataliaPi4.github.io',
   base: "/coach",
-  outDir:"./docs",
-  build:{
-    assets:"a",
-  }
   
 });
 
