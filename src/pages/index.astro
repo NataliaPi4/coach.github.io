@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/sections/Hero.astro";
+import Services from "../components/sections/Services.astro";
+import Competiciones from "../components/sections/Competiciones.astro";
+---
+
+<Layout title="tiro con arco">
+  <main class="flex flex-col overflow-hidden">
+    <Hero className="py-10 pl-10 md:py-16"/>
+    <Competiciones className="pt-10 ml-5 mr-5 md:pt-16"/>
+    <Services className="py-10 md:py-16" />    
+  </main>
+</Layout>

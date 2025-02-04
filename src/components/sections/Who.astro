@@ -1,0 +1,91 @@
+---
+import { Image } from "astro:assets";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+import GradiantText from "../shared/GradiantText.astro";
+import { quien } from "../../utils/data.ts";
+
+type QuienProps = {
+  title: string;
+  painPoint: string;
+  agitatepainPoint: string;
+  solution: string;
+  img: ImageMetadata;
+};
+
+export interface Props { className?: string;}
+
+const { className } = Astro.props;
+---
+
+<section id="jose" class=`flex flex-col ${className}`>
+  {quien.map((solution: QuienProps, index: number) => {
+      const oddIndex = index % 2 === 0;
+      const flexRow = oddIndex ? "midmd:flex-row-reverse" : "midmd:flex-row";
+      const bgColor = oddIndex
+        ? "bg-blue-100 dark:bg-gray-800 "
+        : "bg-transparent";
+      return (
+        <div class={`m-5 rounded-lg py-10 md:py-16 bg-gradient-to-tr from-blue-200/85 to-zinc-200/85 dark:from-slate-800/85 dark:to-zinc-800/85 }`}>
+          <div class={`flex flex-col gap-10 lg:gap-12 lg:mr-auto ${flexRow} mx-auto max-w-7xl w-full`}>
+            <div class="max-w-3xl ml-4 flex-1 flex midmd:w-7/12 lg:w-2/3 flex-col  ">
+              <Title>
+                <GradiantText>{solution.title}</GradiantText>
+              </Title>
+              <Paragraph className="mt-5 mr-6 font-medium text:lg md:text-2xl">
+                {solution.painPoint}
+              </Paragraph>
+              <Paragraph className="mt-5 mr-6 font-medium text:lg md:text-2xl">
+                {solution.agitatepainPoint}
+              </Paragraph>
+              <Paragraph className="mt-5 mr-6 font-medium text:lg md:text-2xl">
+                {solution.solution}
+              </Paragraph>
+            </div>
+            <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0 lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto">
+              <div class="w-full h-80 sm:h-96 midmd:h-full relative">
+                <Image
+                  src={solution.img}
+                  alt="banner image"
+                  width="1240"
+                  height="1385"
+                  class="w-auto bottom-0 ml-5 max-h-full rounded-3xl object-cover"/>
+              </div>
+            </div>
+          </div>
+          <div>
+            <Paragraph className={"mt-8 ml-8 mr-8"}>
+                <strong>¿Porque tiro con arco?</strong><br>
+                Pues a parte de la precisión, me gusta mejorarme día a día, y el arco me lo permite. <em>¿Porque?</em>&nbsp;&nbsp; fácil, 
+                porque eres tú el que estas tirando no es una máquina, por ejemplo no es un rifle que puedes compártelo mejor
+                y  tirar mejor, apuntar mejor … puedes apuntar de otra manera, … pero no,… aquí no, sobre todo en arco  olímpico, 
+                puedes comprar el mejor arco del mercado que si tú no mejoras la cosa no funciona. Alguna vez he comentado con
+                algún compañero que al final te conviertes en parte del arco, en la parte importante del arco, y tienes que luchar 
+                contra ti, contra tu cabeza y además contra todas las situaciones que te puedes encontrar y que te las encuentras. 
+
+            </Paragraph>
+            <Paragraph className={"mt-8 ml-8 mr-8"}>
+                <strong>Cursos de iniciación <em>VS</em>&nbsp;&nbsp;formación continuada</strong><br><br>
+                <strong>Los cursos de iniciación</strong> son importantes como presentación para las personas a las que quieras dar a conocer y engancharles en este deporte.  
+                <strong>La formación continuada</strong> es lo que te convierte en deportista, en arquero en este caso. Es la mejor manera de practicar un deporte dentro de 
+                unas normas, una seguridad, una comodidad, sin dolores, sin molestias y ,claro, con unas satisfacciones.<br> <br>Al final impartes un curso de inicicación, y por muy 
+                extenso que lo quieras realizar no te da para todo, es imposible. Aquí en España vienen siendo los cursos entre 16 a 50 horas, es muy difícil enseñar todas las 
+                disciplinas, todas las modalidades, sus variaciones, mecánica del arco, normativa... por no decir IMPOSIBLE. No salen las horas necesarias, y si hablamos de arco 
+                compuesto, ahí ya nos <em>salimos</em>, solo en la mecánica de arco compuesto liquidas el curso, y sin tirar una flecha.
+            </Paragraph>
+            <Paragraph className={"mt-8 ml-8 mr-8"}>
+                Al final los cursos de iniciación hacen la gran labor de dar a conocer mucho este deporte al mundo, y después son los iniciados los que buscan más formación 
+                para mejorarse. <br><br>
+                <em>Mi opinión personal</em>, es que existe un “agujero negro” al finalizar el curso de iniciación, me explico, cuando acabas
+                lo primero que te viene a la cabeza es:<em>&nbsp;"y,¿ahora que hago?...”</em>&nbsp;Y ahí es en donde se necesitan <strong>los entrenadores.</strong><br><br>
+                Si tuviera que decir 2 cosas malas de este deporte serian: frustración y envidia. <br>
+                Si tuviera que decir 2 cosas buenas de este deporte serian: satisfacción y deportividad.<br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>“Sin lugar a dudas, está lo mejor y lo peor del ser humano en este deporte”</strong>
+            </Paragraph>
+          </div>
+        </div>
+        );
+    })    
+  }
+
+</section>

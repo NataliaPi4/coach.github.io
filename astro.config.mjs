@@ -1,0 +1,12 @@
+import { defineConfig } from "astro/config";
+
+import tailwind from "@astrojs/tailwind";
+
+// https://astro.build/config
+export default defineConfig({
+  integrations: [tailwind()],
+  site:'https://NataliaPi4.github.io',
+  base: 'couch'
+// outDir:"public",
+});
+

@@ -1,0 +1,88 @@
+---
+import Container from "../shared/Container.astro";
+import GradiantText from "../shared/GradiantText.astro";
+import Title from "../shared/Title.astro";
+---
+<section id="galeria">
+    <Container>
+    <div class="box-border relative pt-8 pb-7 md:py-10 px-6 md:px-8 rounded-2xl bg-gradient-to-br from-slate-100 to-zinc-200 dark:from-slate-800 dark:to-zinc-800" >
+        <Title>
+            <GradiantText>Galeria</GradiantText>
+        </Title>
+        <br>            
+        <div class="carousel">
+            <div class="images-container">
+                <img src="/images/1.webp"/>  
+                <img src="/images/5.webp"/>
+                <img src="/images/6.webp"/>
+                <img src="/images/7.webp"/>
+                <img src="/images/9.webp"/>
+                <img src="/images/10.webp"/>
+                <img src="/images/4.webp"/>
+                <img src="/images/11.webp"/>                
+                <img src="/images/12.webp"/>
+                <img src="/images/3.webp"/>
+                <img src="/images/13.webp"/>
+                <img src="/images/14.webp"/>
+                <img src="/images/15.webp"/>
+                <img src="/images/16.webp"/>
+                <img src="/images/17.webp"/>
+                <img src="/images/18.webp"/>
+                <img src="/images/19.webp"/>
+                <img src="/images/21.webp"/>
+                <img src="/images/22.webp"/>
+                <img src="/images/23.webp"/>
+                <img src="/images/26.webp"/>
+                <img src="/images/27.webp"/>
+                <img src="/images/28.webp"/>
+                <img src="/images/30.webp"/>                
+                <img src="/images/32.webp"/>
+                <img src="/images/33.webp"/>
+                <img src="/images/34.webp"/>
+                <img src="/images/35.webp"/>
+                <img src="/images/36.webp"/>
+                <img src="/images/37.webp"/>
+                <img src="/images/38.webp"/>
+                <img src="/images/39.webp"/>
+                <img src="/images/40.webp"/>
+                <img src="/images/41.webp"/>
+                <img src="/images/42.webp"/>
+                <img src="/images/43.webp"/>
+                <img src="/images/44.webp"/>
+                <img src="/images/45.webp"/>
+                <img src="/images/46.webp"/>
+                <img src="/images/49.webp"/>
+                <img src="/images/50.webp"/>     
+            </div>
+        </div>
+    </div>
+    </Container>
+</section>
+
+<style>
+.causousel{
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 900px;
+    width: 85vw;
+    margin: auto;   
+}    
+.images-container{
+    display: flex;
+    height: 320px;
+    gap: 30px;
+    overflow-x: scroll;
+    scrollbar-width: 50px;
+    scrollbar-color: blue lightblue;
+    border-radius: 3%;
+}
+.images-container img {
+    height: 281px;
+    width: 500px;
+    margin: 1%;
+    border-radius: 5%;    
+}
+.images-container img:hover {
+      filter: drop-shadow(6px 6px 10px rgb(75, 75, 78)) ;
+}
+</style>
