@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build && copy .nojekill",
-    "deploy":"npm gh-pages -d build -t true",
+    "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
