@@ -1,3 +1,3 @@
-# Astro - Template 
+# Astro - SPA
 
-https://NataliaPi4.github.io/couch/
+https://nataliapi4.github.io/coach.github.io/
