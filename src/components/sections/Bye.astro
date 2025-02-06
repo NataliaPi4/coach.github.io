@@ -48,30 +48,26 @@ const footerCompany = [
 
 <div class="relative p-5 mt-5">
   <span
-    class="w-20 h-20 rounded-full bg-gradient-to-br from-sky-500 from-0% via-primary via-80% to-green-600 to-110% absolute left-1/3 bottom-1/3"
-  ></span>
+    class="w-20 h-20 rounded-full bg-gradient-to-br from-sky-500 from-0% via-primary via-80% to-green-600 to-110% absolute left-1/3 bottom-1/3">
+  </span>
   <span
-    class="w-40 h-40 rounded-full bg-gradient-to-br from-yellow-400 from-0% via-green-600via-60% via-sky-700 via-85% to-primary to-100% absolute right-1 top-2/4"
-  ></span>
+    class="w-40 h-40 rounded-full bg-gradient-to-br from-yellow-400 from-0% via-green-600via-60% via-sky-700 via-85% to-primary to-100% absolute right-1 top-2/4">
+  </span>
   <span
-    class="w-40 h-40 rounded-full bg-gradient-to-br from-sky-500 from-0% via-primary via-80% to-green-600 to-110% absolute right-1/4 bottom-0"
-  ></span>
+    class="w-40 h-40 rounded-full bg-gradient-to-br from-sky-500 from-0% via-primary via-80% to-green-600 to-110% absolute right-1/4 bottom-0">
+  </span>
   <span
-    class="w-20 h-20 rounded-full bg-gradient-to-br from-green-500 from-0% via-primary via-80% to-sky-600 to-110% absolute right-1/3 top-1/3"
-  ></span>
-
+    class="w-20 h-20 rounded-full bg-gradient-to-br from-green-500 from-0% via-primary via-80% to-sky-600 to-110% absolute right-1/3 top-1/3">
+  </span>
   <span
-    class="w-40 h-40 rounded-full bg-gradient-to-br from-green-500 from-0% via-primary via-80% to-sky-600 to-110% absolute left-0 top-1/3"
-  ></span>
+    class="w-40 h-40 rounded-full bg-gradient-to-br from-green-500 from-0% via-primary via-80% to-sky-600 to-110% absolute left-0 top-1/3">
+  </span>
   <footer
     class="relative rounded-xl bg-gradient-to-tr from-blue-200/85 to-zinc-200/85 dark:from-slate-800/85 dark:to-zinc-800/85 pt-7 rounded-t-3xl backdrop-blur-md">
-    <Container className="pb-8 relative overflow-auto ">
-     
-      <div class="grid grid-cols-2 lg:grid-cols-2 ml- lg:items-stretch gap-8 relative">
-
-        <div class="col-span-2 gap-10 lg:col-span-1 h-auto flex flex-col">
+    <Container className="pb-8 relative lg:overflow-auto">        
+        <d class="col-span-2 gap-10 lg:col-span-1 h-auto flex flex-col">
           <!-- social links -->
-          <div class="min-h-max flex ml-32 gap-40 text-heading-3 mt-2">
+          <div class="min-h-max flex gap-40 justify-center text-heading-3 mt-2">
             <!-- facebook -->
             <a href="https://www.facebook.com/JoseAntonioArquero" class="transition hover:text-heading-1 hover:scale-135 " >
               <svg width="25" height="25" fill="currentColor" class="w-10 h-10" viewBox="0 0 16 16">
@@ -87,10 +83,9 @@ const footerCompany = [
               </svg>              
               <!-- <span class="sr-only">social link</span> -->
             </a>
-          </div>
-      </div>
-<div></div>
-      <div class="grid grid-cols-2 lg:grid-cols-2 lg:justify-self-center gap-4 relative">
+          </div>       
+
+      <div class="grid grid-cols-2 lg:grid-cols-2 lg:justify-self-center justify-items-center gap-4 relative">
         <GroupFooterNav>
           <FooterNav title={"Equipo"} navItems={footerCompany} />
         </GroupFooterNav>
@@ -106,13 +101,12 @@ const footerCompany = [
   <br>
 
 
-<div class="relative rounded-xl bg-gradient-to-tr from-blue-200/85 to-zinc-200/85 dark:from-slate-800/85 dark:to-zinc-800/85 rounded-t-3xl backdrop-blur-md">
+<div class="relative rounded-3xl bg-gradient-to-tr from-blue-200/85 to-zinc-200/85 dark:from-slate-800/85 dark:to-zinc-800/85 rounded-t-3xl backdrop-blur-md">
   <Container>
-    <div class="flex justify-around gap-6 md:text-lg text-heading-3">
+    <div class="flex gap-6 text-xs py-1 ">
       <div>
         &copy; <span id="year"></span>2025. Jóse Antonio Sáez López. Todos los derechos reservados 2025. 
       </div>
-      <div class=" flex justify-items-end hover:pointer-events-auto hover:text-gray-400" > <a href="mailto:nataliainf2024@gmail.com">By Natalia Piris </div>           
-    </div>      
+    
   </Container>
 </div>
